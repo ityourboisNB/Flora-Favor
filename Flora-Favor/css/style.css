@@ -977,7 +977,7 @@ html {
   top: 60%;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
 
 .social-icons i{
@@ -995,11 +995,54 @@ html {
 }
 
 .social-icons .icon img{
-  width: 50px;
+  width: 80px;
 }
 
 .social-icons .icon i {
   font-size: 30px;
 }
 
+/* Container cho ảnh */
+.slides-container-1,
+.slides-container-2,
+.slides-container-3 {
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* Animation cho từng container */
+.slides-container-1 {
+  animation: fadeInOut 12s infinite;
+}
+
+.slides-container-2 {
+  animation: fadeInOut 12s infinite 6s;
+}
+
+.slides-container-3 {
+  animation: fadeInOut 12s infinite 8s;
+}
+
+/* Keyframes cho animation ảnh */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.2;
+  }
+  20%, 60% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 
